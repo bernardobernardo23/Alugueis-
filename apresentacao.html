@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegance Trajes – Documento de Apresentação</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Melhor leitura ao imprimir */
+    @media print {
+      a[href]::after { content: ""; }
+      nav, .no-print { display:none !important; }
+      main { padding: 0 !important; }
+      .page-break { page-break-before: always; }
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            roxo: '#6b21a8',
+            bege: '#fdf6e3'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-roxo text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <h1 class="text-lg sm:text-2xl font-bold">Elegance Trajes – Documento</h1>
+      <div class="hidden sm:flex gap-4 text-sm">
+        <a href="#sumario" class="hover:underline">Sumário</a>
+        <a href="#cenario" class="hover:underline">Cenário</a>
+        <a href="#objetivo" class="hover:underline">Objetivo</a>
+        <a href="#limites" class="hover:underline">Limites</a>
+        <a href="#requisitos" class="hover:underline">Requisitos</a>
+        <a href="#caso-uso" class="hover:underline">Caso de Uso</a>
+        <a href="#eap" class="hover:underline">EAP</a>
+        <a href="#proximos-passos" class="hover:underline">Próximos passos</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto p-6 space-y-8">
+
+    <!-- Hero / Cabeçalho do Documento -->
+    <header class="rounded-2xl border shadow-sm p-6 bg-white">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-roxo">Sistema de Aluguel de Trajes – Documento de Apresentação</h2>
+      <p class="mt-3 text-gray-600">Visão geral do problema, proposta de solução digital, objetivos mensuráveis e requisitos elicitados para a empresa fictícia <span class="font-semibold">Elegance Trajes</span>.</p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-bege text-roxo text-xs font-semibold">Versão 1.0</span>
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-purple-50 text-roxo text-xs font-semibold">Apresentação</span>
+      </div>
+    </header>
+
+    <!-- Sumário -->
+    <section id="sumario" class="rounded-2xl border shadow-sm p-6 bg-white">
+      <h3 class="text-xl font-bold text-roxo mb-4">Sumário</h3>
+      <ol class="list-decimal list-inside space-y-1 text-gray-700">
+        <li><a class="hover:underline" href="#cenario">Cenário fictício da empresa</a></li>
+        <li><a class="hover:underline" href="#objetivo">Objetivo geral (tangível e mensurável)</a></li>
+        <li><a class="hover:underline" href="#metodologia">Metodologia de mensuração</a></li>
+        <li><a class="hover:underline" href="#limites">Limites e fronteiras do sistema</a></li>
+        <li><a class="hover:underline" href="#requisitos">Requisitos elicitados</a></li>
+        <li><a class="hover:underline" href="#caso-uso">Diagrama de Caso de Uso</a></li>
+        <li><a class="hover:underline" href="#eap">Estrutura Analítica do Projeto (EAP)</a></li>
+        <li><a class="hover:underline" href="#proximos-passos">Próximos passos</a></li>
+      </ol>
+    </section>
+
+    <!-- Cenário -->
+    <section id="cenario" class="rounded-2xl border shadow-sm p-6 bg-white">
+      <h3 class="text-xl font-bold text-roxo mb-4">1) Cenário Fictício da Empresa</h3>
+      <p class="text-gray-700 leading-relaxed">
+        A <strong>Elegance Trajes</strong> atua há mais de 10 anos com aluguel de roupas sociais (ternos, vestidos, smokings, roupas temáticas) em uma cidade de médio porte. Até então, o funcionamento era <strong>arcaico</strong>, com registros manuais em cadernos e planilhas, causando:
+      </p>
+      <ul class="mt-3 list-disc list-inside space-y-1 text-gray-700">
+        <li>Dificuldade de controle de <em>disponibilidade</em> de trajes;</li>
+        <li>Perdas de informações de clientes e fichas físicas inconsistentes;</li>
+        <li>Retrabalho e falhas de comunicação entre colaboradores;</li>
+        <li>Ausência de relatórios (itens mais alugados, sazonalidade, clientes frequentes);</li>
+        <li>Necessidade de deslocamento do cliente apenas para consultar disponibilidade.</li>
+      </ul>
+      <p class="mt-3 text-gray-700">Com a <strong>transformação digital</strong>, o novo sistema centraliza cadastros, controla disponibilidade e registra aluguéis com status e valores, viabilizando indicadores e decisões melhores.</p>
+    </section>
+
+    <!-- Objetivo -->
+    <section id="objetivo" class="rounded-2xl border shadow-sm p-6 bg-white">
+      <h3 class="text-xl font-bold text-roxo mb-4">2) Objetivo Geral (Tangível, Mensurável, Agregador de Valor e Claro)</h3>
+      <blockquote class="border-l-4 border-roxo pl-4 italic text-gray-800">
+        “<strong>Aumentar em 10% a taxa de ocupação dos trajes</strong> no primeiro ano após a implantação do sistema, em comparação com a média dos <strong>dois anos anteriores</strong>, por meio da digitalização dos processos de cadastro, consulta de disponibilidade e registro de aluguéis.”
+      </blockquote>
+      <div class="mt-4 grid sm:grid-cols-2 gap-4">
+        <div class="rounded-xl bg-purple-50 p-4">
+          <h4 class="font-semibold text-roxo">Valor agregado</h4>
+          <p class="text-gray-700">Mais aluguéis por período, menos indisponibilidades indevidas, visão de estoque e preferência dos clientes.</p>
+        </div>
+        <div class="rounded-xl bg-bege p-4">
+          <h4 class="font-semibold text-roxo">Clareza e mensuração</h4>
+          <p class="text-gray-700">Meta numérica com janela temporal definida e base comparativa histórica.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metodologia de Mensuração -->
+    <section id="metodologia" class="rounded-2xl border shadow-sm p-6 bg-white">
+      <h3 class="text-xl font-bold text-roxo mb-4">3) Metodologia de Mensuração</h3>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li><strong>Coletar dados históricos</strong> dos últimos 24 meses (alugueis/mês, ocupação média por tipo de traje).</li>
+        <li><strong>Implantar o sistema</strong> e registrar todos os aluguéis por 12 meses.</li>
+        <li><strong>Comparar</strong> a taxa de ocupação média do período pós-implantação com a média dos dois anos anteriores.</li>
+        <li><strong>Relatórios</strong> mensais: trajes mais alugados, clientes frequentes, sazonalidade, taxa de atrasos.</li>
+      </ul>
+    </section>
+
+    <!-- Limites e Fronteiras -->
+    <section id="limites" class="rounded-2xl border shadow-sm p-6 bg-white">
+      <h3 class="text-xl font-bold text-roxo mb-4">4) Limites e Fronteiras do Sistema</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-xl border p-4">
+          <h4 class="font-semibold text-roxo mb-2">O que será feito</h4>
+          <ul class="list-disc list-inside space-y-1 text-gray-700">
+            <li>Cadastro de clientes (completar/atualizar dados);</li>
+            <li>Cadastro de trajes (atributos e disponibilidade);</li>
+            <li>Registro e gestão de aluguéis (datas, status, valores);</li>
+            <li>Relatórios básicos de movimentação e ocupação;</li>
+            <li>Acesso via navegador em computadores da loja.</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border p-4">
+          <h4 class="font-semibold text-roxo mb-2">O que <span class="underline">não</span> será feito (nesta fase)</h4>
+          <ul class="list-disc list-inside space-y-1 text-gray-700">
+            <li>Pagamentos on-line;</li>
+            <li>Aplicativo mobile;</li>
+            <li>Gestão de manutenção/lavagem dos trajes;</li>
+            <li>Integrações contábeis ou com terceiros.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-4 text-sm text-gray-600">Obs.: delimitar fronteiras reduz risco de escopo e garante entregas iterativas.</p>
+    </section>
+
+    <!-- Requisitos -->
+    <section id="requisitos" class="rounded-2xl border shadow-sm p-6 bg-white">
+      <h3 class="text-xl font-bold text-roxo mb-4">5) Requisitos Elicitados</h3>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Requisitos Funcionais -->
+        <div class="rounded-xl bg-purple-50 p-5 border">
+          <h4 class="font-semibold text-roxo mb-2">Requisitos Funcionais</h4>
+          <ol class="list-decimal list-inside space-y-1 text-gray-700">
+            <li>CRUD de clientes.</li>
+            <li>CRUD de trajes, incluindo disponibilidade.</li>
+            <li>Registro de aluguéis vinculando cliente e traje.</li>
+            <li>Atualização de status (Ativo, Concluído, Atrasado).</li>
+            <li>Relatórios de ocupação, itens mais alugados e clientes frequentes.</li>
+          </ol>
+        </div>
+
+        <!-- Requisitos Não Funcionais -->
+        <div class="rounded-xl bg-bege p-5 border">
+          <h4 class="font-semibold text-roxo mb-2">Requisitos Não Funcionais</h4>
+          <ol class="list-decimal list-inside space-y-1 text-gray-700">
+            <li>Disponível via navegador (intranet/localhost).</li>
+            <li>Interface responsiva e intuitiva.</li>
+            <li>Persistência em MySQL (XAMPP) e segurança básica (PDO/Prepared Statements).</li>
+            <li>Auditoria mínima: data/hora dos registros de aluguel.</li>
+          </ol>
+        </div>
+      </div>
+
+      <p class="mt-4 text-sm text-gray-600">Referência para elicitação: Sommerville & Kotonya (1998) – entender necessidades do usuário é o primeiro passo do processo.</p>
+    </section>
+
+    <!-- Caso de Uso -->
+    <section id="caso-uso" class="rounded-2xl border shadow-sm p-6 bg-white">
+      <h3 class="text-xl font-bold text-roxo mb-4">6) Diagrama de Caso de Uso</h3>
+      <p class="text-gray-700 mb-4">Representação visual dos atores e funcionalidades do sistema.</p>
+      <div class="flex justify-center">
+        <img src="caseUSE.png" alt="Diagrama de Caso de Uso" class="border rounded-lg shadow-md max-w-full h-auto">
+      </div>
+    </section>
+
+    <!-- Estrutura Analítica do Projeto (EAP) -->
+    <section id="eap" class="rounded-2xl border shadow-sm p-6 bg-white">
+      <h3 class="text-xl font-bold text-roxo mb-4">7) Estrutura Analítica do Projeto (EAP)</h3>
+      <p class="text-gray-700 mb-4">Decomposição do projeto em pacotes de trabalho para melhor gerenciamento e acompanhamento.</p>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li><strong>Sistema de Aluguel de Trajes</strong>
+          <ul class="list-decimal list-inside ml-6 space-y-1">
+            <li>Planejamento
+              <ul class="list-disc list-inside ml-6 space-y-1">
+                <li>Levantamento de requisitos</li>
+                <li>Definição de escopo</li>
+                <li>Cronograma</li>
+              </ul>
+            </li>
+            <li>Análise e Modelagem
+              <ul class="list-disc list-inside ml-6 space-y-1">
+                <li>Diagrama de Casos de Uso</li>
+                <li>Diagrama de Classes</li>
+                <li>Diagrama de Sequência</li>
+                <li>Modelagem de Banco de Dados</li>
+              </ul>
+            </li>
+            <li>Desenvolvimento
+              <ul class="list-disc list-inside ml-6 space-y-1">
+                <li>Cadastro de clientes</li>
+                <li>Cadastro de trajes</li>
+                <li>Consulta de disponibilidade</li>
+                <li>Registro de aluguel</li>
+                <li>Devolução de traje</li>
+                <li>Relatórios gerenciais</li>
+              </ul>
+            </li>
+            <li>Testes
+              <ul class="list-disc list-inside ml-6 space-y-1">
+                <li>Testes unitários</li>
+                <li>Testes de integração</li>
+                <li>Testes de aceitação pelo usuário</li>
+              </ul>
+            </li>
+            <li>Implantação
+              <ul class="list-disc list-inside ml-6 space-y-1">
+                <li>Configuração do servidor</li>
+                <li>Migração de dados</li>
+                <li>Deploy do sistema</li>
+              </ul>
+            </li>
+            <li>Treinamento e Documentação
+              <ul class="list-disc list-inside ml-6 space-y-1">
+                <li>Manual do usuário</li>
+                <li>Treinamento de atendentes e gerentes</li>
+                <li>Documentação técnica</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Próximos Passos -->
+    <section id="proximos-passos" class="rounded-2xl border shadow-sm p-6 bg-white">
+      <h3 class="text-xl font-bold text-roxo mb-4">8) Próximos Passos (para a próxima semana)</h3>
+      <ul class="list-disc list-inside space-y-2 text-gray-700">
+        <li><strong>Definir métricas detalhadas</strong> para capturar taxa de ocupação mensal.</li>
+        <li><strong>Plano de implantação</strong>: treinamento interno e migração de dados essenciais.</li>
+        <li><strong>Validação de requisitos</strong> junto ao gerente e atendentes.</li>
+      </ul>
+    </section>
+
+    <section class="no-print text-center pt-4">
+      <button onclick="window.print()" class="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-roxo text-white hover:bg-purple-900 shadow">
+        <span>Imprimir / Salvar em PDF</span>
+      </button>
+    </section>
+
+  </main>
+
+</body>
+</html>
